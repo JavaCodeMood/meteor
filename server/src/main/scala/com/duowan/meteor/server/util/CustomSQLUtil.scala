@@ -599,7 +599,7 @@ object CustomSQLUtil extends Logging {
                       val pKeyColValuesMD5 = Hex.encodeHexString(messageDigest.digest(pKeyColValues.getBytes("UTF-8")))
                       val valColValue = r.getAs[Long](valCol)
                       val keyMap = parMapKeyMap.getOrElseUpdate(partitionColValue, scala.collection.mutable.Map[String, Long]())
-                      val min = keyMap.getOrElseUpdate(pKeyColValuesMD5, 0L)
+                      val min = keyMap.getOrElseUpdate(pKeyColValuesMD5, Long.MaxValue)
                       if (min > valColValue) {
                         keyMap.put(pKeyColValuesMD5, valColValue)
                       }
