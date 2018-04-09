@@ -178,7 +178,8 @@
 	tar -zxvf spark-2.1.0-bin-hadoop2.7.tgz
 	ln -s spark-2.1.0-bin-hadoop2.7 spark
 	mkdir -p /data/apps/spark/work/cron/
-	cp /meteor/config/demo/* /data/apps/spark/conf/
+	按自己的环境更改/data/src/meteor/config/demo/meteor.properties
+	cp /data/src/meteor/config/demo/* /data/apps/spark/conf/
 	
 	rm -fr spark-2.1.0-bin-hadoop2.7.tgz
 	tar -zcvf spark-2.1.0-bin-hadoop2.7.tgz spark-2.1.0-bin-hadoop2.7
