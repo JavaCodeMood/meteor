@@ -195,6 +195,7 @@
 	
 10、提交driver
 	在192.168.1.10的spark用户
+	按自己的环境更改/data/apps/meteor/meteor_shell.sh
 	/data/apps/meteor/meteor_shell.sh restart
 	web地址：http://192.168.1.10:4040
 	
